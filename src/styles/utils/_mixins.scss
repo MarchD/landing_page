@@ -1,6 +1,63 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $h-buttons;
+  font-family: Avenir, sans-serif;
+  font-weight: 800;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@mixin section-title {
+  font-family: Avenir, sans-serif;
+  color: $c-black;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+@mixin section-description {
+  font-family: Avenir, sans-serif;
+  color: $c-black-light;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+@mixin footer-items {
+  font-family: Avenir, sans-serif;
+  line-height: 1.8;
+  color: $c-black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@mixin notebook {
+  @media screen and (max-width: 1218px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin iPadMini {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 684px) {
+    @content;
+  }
+}
+
+@mixin iPhoneSE {
+  @media screen and (max-width: 320px) {
+    @content;
   }
 }
