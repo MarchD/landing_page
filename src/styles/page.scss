@@ -1,0 +1,13 @@
+.page {
+  &__non-scroll {
+    overflow: hidden;
+  }
+
+  &__header {
+    margin: 48px 0;
+
+    @include mobile {
+      margin: 25px 0;
+    }
+  }
+}

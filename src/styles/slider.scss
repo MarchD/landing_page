@@ -1,0 +1,67 @@
+.slider {
+  display: flex;
+  width: 100%;
+  height: $h-slide;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  overflow: hidden;
+
+  @include tablet {
+    height: auto;
+  }
+
+  &__image {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50px;
+
+    @include iPhoneSE {
+      height: 60vh;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: $h-slide + 38px;
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    display: flex;
+    column-gap: 8px;
+    transform: translateX(50%);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__dot {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__label::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(156, 105, 226, 0.2);
+    cursor: pointer;
+  }
+
+  &__dot:checked + &__label::after {
+    background-color: rgb(156, 105, 226);
+  }
+}

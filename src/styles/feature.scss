@@ -1,0 +1,155 @@
+.feature {
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    column-gap: 30px;
+    z-index: 1;
+    height: $h-feature;
+
+    @include mobile {
+      padding: 30px;
+    }
+  }
+
+  &-1__back-large {
+    position: absolute;
+    top: 14px;
+    right: 23px;
+  }
+
+  &-1__back-sm {
+    position: absolute;
+    top: 44px;
+    right: 120px;
+  }
+
+  &-2__back-large {
+    position: absolute;
+    top: 60px;
+    right: 108px;
+    transform: rotate(125deg) scale(1.6);
+  }
+
+  &-2__back-sm {
+    position: absolute;
+    bottom: 44px;
+    right: 33px;
+    transform: scale(1.7);
+  }
+
+  &-3__back-sm {
+    position: absolute;
+    top: 44px;
+    right: 41px;
+    transform: rotate(-55deg) scale(1.8);
+  }
+
+  &-4__back-large {
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
+    transform: rotate(179deg) scale(1.1);
+  }
+
+  &__image {
+    width: 232px;
+    align-self: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: Avenir, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.6;
+    color: $c-black;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    max-width: 225px;
+    font-family: Avenir, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $c-black-light;
+    line-height: 1.6;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    margin-bottom: 39px;
+
+    display: flex;
+    column-gap: 20px;
+    color: $c-black;
+    line-height: 1;
+    font-size: 16px;
+    font-family: Avenir, sans-serif;
+    font-weight: 800;
+
+    &:hover .arrow,
+    &:focus .arrow {
+      animation: scale 0.3s linear alternate infinite;
+
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1.1);
+
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .feature-#{$i} {
+    background-image: url("../images/features/back-#{$i}.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @include iPadMini {
+      background-image: none;
+      border-radius: 50px;
+    }
+  }
+}
+
+@include iPadMini {
+  .feature-1 {
+    background-color: $c-feature-1;
+  }
+
+  .feature-2 {
+    background-color: $c-feature-2;
+  }
+
+  .feature-3 {
+    background-color: $c-feature-3;
+  }
+
+  .feature-4 {
+    background-color: $c-feature-4;
+  }
+}
