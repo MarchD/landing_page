@@ -14,6 +14,10 @@
 @import "social";
 @import "copyright";
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -22,7 +26,6 @@
 
 body {
   margin: 0;
-
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -56,7 +59,8 @@ button {
   }
 
   @include iPadMini {
-    max-width: 600px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -82,4 +86,8 @@ input,
 textarea {
   outline: none;
   border: 0;
+}
+
+ul {
+  padding: 0;
 }

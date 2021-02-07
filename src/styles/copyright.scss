@@ -1,0 +1,12 @@
+.copyright {
+  max-width: 360px;
+  font-family: Avenir, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: $c-black;
+
+  @include tablet {
+    margin: auto;
+    text-align: center;
+  }
+}

@@ -1,0 +1,45 @@
+.button {
+
+  &-request {
+    @include button;
+    width: 210px;
+    column-gap: 20px;
+    font-size: 16px;
+    color: $c-black;
+    background-color: $c-white;
+    box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+    transition: box-shadow 0.3s linear;
+
+    &:hover {
+      box-shadow: 0 5px 8px rgba(75, 93, 104, 0.3);
+    }
+
+    @keyframes arrow {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__arrow {
+    animation: arrow 0.3s infinite alternate;
+  }
+
+  &-link {
+    @include button;
+    width: 170px;
+    font-size: 18px;
+    color: $c-white;
+    background-color: $c-purple;
+    transition: background-color 0.3s linear, box-shadow 0.3s linear;
+
+    &:hover {
+      background-color: $c-pink;
+      box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+    }
+  }
+}

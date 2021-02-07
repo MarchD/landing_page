@@ -1,0 +1,165 @@
+.footer {
+  padding-top: 100px;
+  @include footer-items;
+  border-top: 2px solid rgba(156, 105, 226, 0.2);
+
+  @include iPadMini {
+    border-top: none;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+
+    @include tablet {
+      align-items: center;
+    }
+
+    @include mobile {
+      row-gap: 20px;
+      flex-direction: column;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @include section-title;
+
+    @include iPadMini {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    @include section-description;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__button {
+    @include mobile {
+      width: 300px;
+    }
+  }
+
+  &__navigation {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    margin-bottom: 93px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      row-gap: 30px;
+    }
+  }
+
+  &__contacts {
+    @include mobile {
+      grid-column: 1 / span 2;
+      justify-self: center;
+      text-align: center;
+    }
+  }
+
+  &__company {
+    margin-bottom: 65px;
+
+    @include tablet {
+      margin: 20px 0;
+    }
+  }
+
+  &__address {
+    display: block;
+    margin-bottom: 10px;
+    @include footer-items;
+  }
+
+  &__link {
+    position: relative;
+    width: max-content;
+    margin-bottom: 15px;
+    @include footer-items;
+
+    &:first-child {
+      margin-bottom: 35px;
+      font-weight: 800;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $c-black-light;
+      transition: width 0.3s linear;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    @include footer-items;
+
+    @include tablet {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  &__help {
+    display: flex;
+    flex-direction: column;
+    @include footer-items;
+
+    @include tablet {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  &__social {
+    @include tablet {
+      align-self: flex-end;
+    }
+
+    @include mobile {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+  }
+
+  &__social-title {
+    text-align: center;
+    margin-bottom: 35px;
+    @include footer-items;
+    font-weight: 800;
+  }
+}

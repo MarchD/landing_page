@@ -1,0 +1,45 @@
+.features {
+  &__content {
+    margin-bottom: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @include section-title;
+
+    @include iPadMini {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    max-width: 584px;
+    @include section-description;
+
+    @include mobile {
+      max-width: 400px;
+      font-size: 14px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: 80px 50px;
+    grid-template-columns: repeat(2, minmax(auto, 531px));
+    grid-template-rows: repeat(2, $h-feature);
+
+    @include tablet {
+      grid-template-columns: 531px;
+      justify-content: center;
+    }
+
+    @include mobile {
+      grid-template-columns: 300px;
+      row-gap: 30px;
+    }
+  }
+}

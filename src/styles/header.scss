@@ -1,0 +1,24 @@
+.header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+
+  @include tablet {
+    display: block;
+    position: relative;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 82px;
+
+    @include tablet {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__request {
+    justify-self: flex-end;
+  }
+}

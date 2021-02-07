@@ -1,0 +1,24 @@
+.social {
+  display: flex;
+  column-gap: 14px;
+
+  @include mobile {
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $s-social;
+    height: $s-social;
+    border-radius: 50%;
+    background-color: $c-gray;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: $c-pink;
+    }
+  }
+
+}

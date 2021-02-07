@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
-  <body>
-<!-- MODAL -->
+  <body class="page">
+
       <div class="modal">
         <div class="modal__back">
           <div class="modal__window request">
@@ -23,7 +24,6 @@
                     id="name"
                     name="name"
                   >
-
                 </label>
 
                 <label class="request__label" for="email">
@@ -34,7 +34,6 @@
                     id="email"
                     name="email"
                   >
-
                 </label>
 
                 <label class="request__label" for="web">
@@ -45,7 +44,6 @@
                     id="web"
                     name="web"
                   >
-
                 </label>
 
                 <label class="request__label" for="message">
@@ -68,16 +66,12 @@
         </div>
       </div>
 
-<!--      MODAL -->
-
-    <header class="header page__header container">
+    <header class="header page__header container" id="header">
 
       <div class="header__navigation">
-        <a href="" class="logo">
+        <a href="#" class="logo">
           <img src="images/logo.svg" alt="logo">
         </a>
-
-
 
         <nav class="nav">
           <a href="#" class="nav__link--toggle">
@@ -98,10 +92,10 @@
               <a href="#" class="nav__link">Help</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Features</a>
+              <a href="#features" class="nav__link">Features</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Signup</a>
+              <a href="#footer" class="nav__link">Signup</a>
             </li>
             <li class="nav__item nav__item--search">
               <a href="#" class="nav__link">
@@ -139,7 +133,7 @@
           security, so you can store your data here safely but not be afraid
           of being stolen by others.
         </p>
-        <a href="" class="button-link">Learn more</a></div>
+        <a href="#features" class="button-link intro__button-link">Learn more</a></div>
 
       <div class="slider__wrapper">
         <div class="intro__slider slider">
@@ -180,7 +174,7 @@
       </div>
     </section>
 
-    <section class="features container section">
+    <section class="features container section" id="features">
       <div class="features__content">
         <h2 class="features__title">Features</h2>
         <p class="features__description">
@@ -307,7 +301,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__inner container">
 
         <div class="footer__action">
@@ -319,9 +313,9 @@
           </div>
 
           <div class="footer__buttons">
-            <a href="" class="button-link">Learn more</a>
+            <a href="#features" class="button-link footer__button">Learn more</a>
 
-            <button type="button" class="button-request">
+            <button type="button" class="button-request footer__button">
               Request Demo
               <img src="./images/arrow.svg" alt="" class="button__arrow">
             </button>
@@ -332,7 +326,7 @@
         <div class="footer__navigation">
           <div class="footer__contacts">
             <div class="footer__company">
-              <a href="" class="logo">
+              <a href="#header" class="logo">
                 <img src="images/logo.svg" alt="logo">
                 <span>DateWare</span>
               </a>
@@ -359,9 +353,9 @@
           </div>
 
           <div class="footer__about">
-            <a href="#" class="footer__link">About</a>
+            <a href="#header" class="footer__link">About</a>
             <a href="#" class="footer__link">Profile</a>
-            <a href="#" class="footer__link">Features</a>
+            <a href="#features" class="footer__link">Features</a>
             <a href="#" class="footer__link">Careers</a>
             <a href="#" class="footer__link">DW News</a>
           </div>
@@ -380,13 +374,13 @@
             </p>
 
             <div class="social footer__social">
-              <a class="social__item" href="">
+              <a class="social__item" target="_blank" href="https://www.facebook.com/">
                 <img src="images/socials/facebook.svg" alt="">
               </a>
-              <a class="social__item" href="">
+              <a class="social__item" target="_blank" href="https://twitter.com/">
                 <img src="images/socials/twitter.svg" alt="">
               </a>
-              <a class="social__item" href="">
+              <a class="social__item" target="_blank" href="https://www.instagram.com/">
                 <img src="images/socials/instagram.svg" alt="">
               </a>
             </div>
